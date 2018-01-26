@@ -20,6 +20,7 @@ class AddressesController < ApplicationController
 
   # GET /addresses/1/edit
   def edit
+    @customers = Customer.all
   end
 
   # POST /addresses

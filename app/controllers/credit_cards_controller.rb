@@ -20,6 +20,7 @@ class CreditCardsController < ApplicationController
 
   # GET /credit_cards/1/edit
   def edit
+    @customers = Customer.all
   end
 
   # POST /credit_cards

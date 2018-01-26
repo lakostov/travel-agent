@@ -15,10 +15,10 @@
     <% @cruises.each do |cruise| %>
       <tr>
         <td><%= cruise.name %></td>
-        <td><%= cruise.ship %></td>
-        <td><%= link_to 'Show', cruise %></td>
-        <td><%= link_to 'Edit', edit_cruise_path(cruise) %></td>
-        <td><%= link_to 'Destroy', cruise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= cruise.ship.name %></td>
+        <td><%= link_to 'Show', cruise, :class=>"btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_cruise_path(cruise), :class=>"btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Destroy', cruise, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-sm btn-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Cruise', new_cruise_path %>
+<%= link_to 'New Cruise', new_cruise_path, :class=>"btn btn-lg btn-primary" %>

@@ -22,9 +22,9 @@
         <td><%= credit_card.name_on_card %></td>
         <td><%= credit_card.organisation %></td>
         <td><%= credit_card.customer.last_name %></td>
-        <td><%= link_to 'Show', credit_card %></td>
-        <td><%= link_to 'Edit', edit_credit_card_path(credit_card) %></td>
-        <td><%= link_to 'Destroy', credit_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', credit_card, :class=>"btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_credit_card_path(credit_card), :class=>"btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Destroy', credit_card, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-sm btn-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Credit Card', new_credit_card_path %>
+<%= link_to 'New Credit Card', new_credit_card_path, :class=>"btn btn-lg btn-primary" %>

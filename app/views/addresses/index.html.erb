@@ -20,9 +20,9 @@
         <td><%= address.city %></td>
         <td><%= address.postcode %></td>
         <td><%= address.customer.last_name %></td>
-        <td><%= link_to 'Show', address %></td>
-        <td><%= link_to 'Edit', edit_address_path(address) %></td>
-        <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', address, :class=>"btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_address_path(address), :class=>"btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-sm btn-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Address', new_address_path %>
+<%= link_to 'New Address', new_address_path, :class=>"btn btn-lg btn-primary" %>

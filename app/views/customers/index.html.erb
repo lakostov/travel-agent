@@ -20,9 +20,9 @@
         <td><%= customer.first_name %></td>
         <td><%= customer.has_good_credit %></td>
         <td><%= customer.paid %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', customer, :class=>"btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer), :class=>"btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-sm btn-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Customer', new_customer_path %>
+<%= link_to 'New Customer', new_customer_path, :class=>"btn btn-lg btn-primary" %>

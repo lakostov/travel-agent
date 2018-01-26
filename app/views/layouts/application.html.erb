@@ -9,6 +9,24 @@
   </head>
 
   <body>
+  	<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "sample app", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", '/' %></li>
+            <li><%= link_to "Customers",   customers_path %></li>
+            <li><%= link_to "Addresses", addresses_path %></li>
+            <li><%= link_to "Credit cards", credit_cards_path %></li>
+            <li><%= link_to "Reservations", reservations_path %></li>
+            <li><%= link_to "Cruises", cruises_path %></li>
+            <li><%= link_to "Ships", ships_path %></li>
+            <li><%= link_to "Payments", payments_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
     <%= yield %>
   </body>
 </html>
