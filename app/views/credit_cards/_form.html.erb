@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :customer_id %>
-    <%= form.collection_select( :customer_id, Customer.all, :id, :last_name ) %>
+    <%= Customer.find(@credit_card.customer_id).last_name %> 
   </div>
 
   <div class="actions">

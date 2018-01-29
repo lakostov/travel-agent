@@ -17,7 +17,7 @@
 
 <p>
   <strong>Ship:</strong>
-  <%= @cabin.ship %>
+  <%= Ship.find(@cabin.ship_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_cabin_path(@cabin) %> |

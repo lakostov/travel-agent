@@ -19,7 +19,7 @@
         <td><%= cabin.name %></td>
         <td><%= cabin.beds %></td>
         <td><%= cabin.deck %></td>
-        <td><%= cabin.ship %></td>
+        <td><%= Ship.find(cabin.ship_id).name %></td>
         <td><%= link_to 'Show', cabin, :class=>"btn btn-sm btn-primary" %></td>
         <td><%= link_to 'Edit', edit_cabin_path(cabin), :class=>"btn btn-sm btn-primary" %></td>
         <td><%= link_to 'Destroy', cabin, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-sm btn-primary" %></td>
