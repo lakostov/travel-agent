@@ -32,7 +32,7 @@ class CreditCardsController < ApplicationController
 
     respond_to do |format|
       if @credit_card.save
-         @customer = Customer.find(@credit_card.customer_id)
+        @customer = Customer.find(@credit_card.customer_id)
         format.html { redirect_to @customer, notice: 'Credit card was successfully created.' }
         format.json { render :show, status: :created, location: @credit_card }
       else

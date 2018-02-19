@@ -24,12 +24,12 @@
 
   <div class="field">
     <%= form.label :customer_id %>
-    <%= form.collection_select( :customer_id, @customers, :id, :last_name ) %>
+    <%= form.text_field :customer_id %> <%= @customer.first_name %> <%= @customer.last_name %>
   </div>
 
   <div class="field">
     <%= form.label :reservation_id %>
-    <%= form.collection_select( :reservation_id, @reservations, :id, :id ) %>
+    <%= form.text_field :reservation_id, value: @reservation.id %> <%= Cruise.find(@reservation.cruise_id).name %>
   </div>
 
   <div class="actions">

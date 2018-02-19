@@ -1,15 +1,18 @@
 class CruisesController < ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, with: :redirect_if_not_found
   before_action :set_cruise, only: [:show, :edit, :update, :destroy]
 
   # GET /cruises
   # GET /cruises.json
   def index
     @cruises = Cruise.all
+    @cruise_search_results = Cruise.search(params[:term])
   end
 
   # GET /cruises/1
   # GET /cruises/1.json
   def show
+    
   end
 
   # GET /cruises/new
@@ -71,6 +74,6 @@ class CruisesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cruise_params
-      params.require(:cruise).permit(:name, :ship_id)
+      params.require(:cruise).permit(:name, :ship_id, :term)
     end
 end

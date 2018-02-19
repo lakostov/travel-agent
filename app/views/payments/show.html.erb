@@ -12,12 +12,12 @@
 
 <p>
   <strong>Customer:</strong>
-  <%= @payment.customer %>
+  <%= @payment.customer.last_name %>
 </p>
 
 <p>
   <strong>Reservation:</strong>
-  <%= @payment.reservation %>
+  <%= @payment.reservation.id %>
 </p>
 
 <%= link_to 'Edit', edit_payment_path(@payment) %> |

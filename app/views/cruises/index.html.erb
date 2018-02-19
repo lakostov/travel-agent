@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
+<p>Search for a cruise</p>
+<%= form_tag(cruises_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search' %>
+<% end %>
 
 <h1>Cruises</h1>
 
@@ -12,7 +17,7 @@
   </thead>
 
   <tbody>
-    <% @cruises.each do |cruise| %>
+    <% @cruise_search_results.each do |cruise| %>
       <tr>
         <td><%= cruise.name %></td>
         <td><%= cruise.ship.name %></td>
